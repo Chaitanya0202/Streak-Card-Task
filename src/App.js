@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
+import CoinsTable from "./Components/CoinsTable";
+import { AppProvider } from "./Components/Context/StockContext";
+import Dashboard from "./Components/Dashboard";
+import CoinPage from "./Components/Pages/CoinPage";
+import SideNav from "./Components/SideNav";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+
+<AppProvider>
+      {/* <Header /> */}
+      <SideNav/>
+      <Routes>
+        <Route exact path="/" element={<CoinsTable />} />
+
+        {/* <Route exact path="/" elmement={<CoinsTable />} /> */}
+        <Route exact path="/home" element={<Dashboard />} />
+        <Route path="/coins/:id" element={<CoinPage/>} exact />
+      </Routes>
+      </AppProvider>
+    </Router>
   );
 }
 
