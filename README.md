@@ -1,4 +1,7 @@
 # Getting Started with Create React App
+# output ![Screenshot 2024-05-27 150805](https://github.com/Chaitanya0202/Streak-Card-Task/assets/115619207/8e796e3b-6846-4740-8694-1d99e5560fff)
+# output ![Screenshot 2024-05-27 150902](https://github.com/Chaitanya0202/Streak-Card-Task/assets/115619207/b1a1af99-661d-422f-87b2-0393ec057203)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
